@@ -11,7 +11,7 @@
 
 ### Data gathering
 
-1. Execute `scrapy_web_crawler.py` to get the dataset downloaded to `data/all_data.csv`
+1. Execute `scrapy_web_crawler.py` to get the dataset downloaded to `data/raw_data.csv`
 
 ### Local Development
 

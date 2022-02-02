@@ -39,7 +39,7 @@ class ZuwendungsdatenbankSpider(scrapy.Spider):
     
 process = CrawlerProcess(
     settings = {
-        'FEED_URI' : 'data/all_data.csv',
+        'FEED_URI' : 'data/raw_data.csv',
         'FEED_FORMAT' : 'csv'
     }
 )
