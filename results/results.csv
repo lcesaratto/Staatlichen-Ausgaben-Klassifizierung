@@ -1,1 +1,2 @@
 model_name,parameters,dataset,accuracy,f1
+BERT base baseline,default,raw without duplicates,,0.7372518337120106
