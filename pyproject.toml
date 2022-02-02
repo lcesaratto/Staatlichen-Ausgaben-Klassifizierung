@@ -11,11 +11,15 @@ pandas = "^1.4.0"
 ipykernel = "^6.7.0"
 seaborn = "^0.11.2"
 transformers = "^4.16.2"
-torch = "1.10.1"
 gdown = "^4.2.1"
 datasets = "^1.18.2"
+scikit-learn = "^1.0.2"
 
 [tool.poetry.dev-dependencies]
+poethepoet = "^0.12.2"
+
+[tool.poe.tasks]
+force-cuda11 = "python -m pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

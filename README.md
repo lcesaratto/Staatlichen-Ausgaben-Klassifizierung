@@ -8,6 +8,10 @@
 - Poetry
 - Scrapy
 - Pandas
+- Seaborn
+- Pytorch
+- Huggingface
+- Scikit-learn
 
 ### Data gathering
 
@@ -35,3 +39,9 @@
 
 1. [Install Docker](https://www.docker.com/products/docker-desktop)
 2. Execute in Terminal `make build` followed by `make run`
+
+### For later reference
+
+https://github.com/python-poetry/poetry/issues/2613#issuecomment-799693903
+poetry install
+poe force-cuda11
