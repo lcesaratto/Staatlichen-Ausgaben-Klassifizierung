@@ -1,3 +1,4 @@
 model_name,parameters,dataset,macro_f1,weighted_f1
 BERT base baseline,"default, 12 epochs",raw without duplicates,0.4024055682879212,0.7145640235176934
-Random Forest,default,"preprocessed (no augmentation), tfidf",0.31377238,0.54892923
+Random Forest,default,"preprocessed (no augmentation), tfidf",0.3991127960473652,0.5764114795537445
+Random Forest,default,"preprocessed (no augmentation), bert sentence embeddings",0.2127592569805004,0.48453095890950315
