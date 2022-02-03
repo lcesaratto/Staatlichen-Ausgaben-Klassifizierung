@@ -1,2 +1,3 @@
 model_name,parameters,dataset,macro_f1,weighted_f1
-BERT base baseline,"default, 12 epochs",raw without duplicates,0.40240556828792123,0.7145640235176934
+BERT base baseline,"default, 12 epochs",raw without duplicates,0.4024055682879212,0.7145640235176934
+Random Forest,default,"preprocessed (no augmentation), tfidf",0.31377238,0.54892923
