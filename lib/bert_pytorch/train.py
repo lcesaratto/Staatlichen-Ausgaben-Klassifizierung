@@ -63,7 +63,8 @@ def train_model_on_train_data(TRAIN_DATA_PATH, MODEL_NAME, BATCH_SIZE, NUM_EPOCH
                 })
 
             total_val_loss = 0
-            metric = load_metric("f1")
+            metric_weighted_f1 = load_metric("f1")
+            metric_macro_f1 = load_metric("f1")
 
             model.eval()
             for batch in validation_dataloader:
@@ -81,14 +82,17 @@ def train_model_on_train_data(TRAIN_DATA_PATH, MODEL_NAME, BATCH_SIZE, NUM_EPOCH
                 total_val_loss += loss.item()
 
                 predictions = torch.argmax(logits, dim=-1)
-                metric.add_batch(predictions=predictions, references=parameters["labels"])
+                metric_weighted_f1.add_batch(predictions=predictions, references=parameters["labels"])
+                metric_macro_f1.add_batch(predictions=predictions, references=parameters["labels"])
 
             training_stats[epoch]["validation_loss"] = total_val_loss/len(validation_dataloader)
-            training_stats[epoch]["validation_f1_score"] = metric.compute(average='weighted')
+            training_stats[epoch]["validation_macro_f1_score"] = metric_macro_f1.compute(average='macro')
+            training_stats[epoch]["validation_weighted_f1_score"] = metric_weighted_f1.compute(average='weighted')
 
             print(f"\nAvg training loss:    {training_stats[epoch]['training_loss']}")
             print(f"Avg validation loss:  {training_stats[epoch]['validation_loss']}")
-            print(f"F1 validation score:  {training_stats[epoch]['validation_f1_score']}\n")
+            print(f"Macro F1 validation score:  {training_stats[epoch]['validation_macro_f1_score']}")
+            print(f"Weighted F1 validation score:  {training_stats[epoch]['validation_weighted_f1_score']}\n")
 
     except RuntimeError as e:
         print(e)

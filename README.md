@@ -25,7 +25,7 @@
 4. Create a virtual enviroment `python -m venv venv`
 5. Install Poetry inside the virtual enviroment `pip install poetry`. Skip this step if Poetry is already available globally (as explained in step 3)
 6. Install dependencies `poetry install`
-7. Execute relevant jupyter notebooks
+7. Execute `jupyter-lab` to visualize the project notebooks
 
 ### Local Deployment for Windows Users
 
