@@ -1,3 +1,5 @@
 venv
 __pycache__
-pretrained_models/*
+pretrained_models/bert_pytorch/entire_model.pt
+pretrained_models/bert_pytorch/model_state_dict.pt
+pretrained_models/random_forest/best_estimator.pkl
