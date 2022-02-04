@@ -1,0 +1,10 @@
+case-lisandro:
+  build: .
+  environment:
+    JUPYTER_ENABLE_LAB: "yes"
+  ports:
+    - 10000:8888
+  environment:
+    JUPYTER_ENABLE_LAB: "yes"
+    JUPYTER_TOKEN: "docker"
+  container_name: case-lisandro

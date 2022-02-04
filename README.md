@@ -12,10 +12,12 @@
 - Pytorch
 - Huggingface
 - Scikit-learn
+- Spacy
+- Docker
 
 ### Data gathering
 
-1. Execute `scrapy_web_crawler.py` to get the dataset downloaded to `data/raw_data.csv`
+1. Execute cells in `0_Scrape_dataset.ipynb` to get the dataset downloaded to `data/raw_data.csv`
 
 ### Local Development
 
@@ -25,23 +27,20 @@
 4. Create a virtual enviroment `python -m venv venv`
 5. Install Poetry inside the virtual enviroment `pip install poetry`. Skip this step if Poetry is already available globally (as explained in step 3)
 6. Install dependencies `poetry install`
-7. Execute `jupyter-lab` to visualize the project notebooks
+7. Install CUDA 11 or newer
+8. Execute in console `poe force-cuda11` to install Pytorch 1.7.1+cu110 or simply `poetry add torch`, but be careful that the pytorch version is compatible with the CUDA version installed. For more information about poe check the [link](https://github.com/python-poetry/poetry/issues/2613#issuecomment-799693903)
+9. Execute `jupyter-lab` to visualize the project notebooks
 
 ### Local Deployment for Windows Users
 
 1. [Install Docker](https://docs.docker.com/desktop/windows/install/) with WSL2 backend
 2. Check WSL version installed `wsl -l -v`. The listed version must be 2
 3. Execute in Windows Console `docker run hello-world` to check if Docker is working correctly
-4. [Install GIT Bash](https://gitforwindows.org/) and execute `bash create_container.sh`, OR...
-5. Execute in Windows Console manually the commands inside `create_container.sh`
+4. Execute in console `docker-compose up -d --build` to create the container
+5. Jupyter Lab available at `http://localhost:10000/lab`. Password is "docker"
 
 ### Local Deployment for Linux/Mac Users
 
 1. [Install Docker](https://www.docker.com/products/docker-desktop)
-2. Execute in Terminal `make build` followed by `make run`
-
-### For later reference
-
-https://github.com/python-poetry/poetry/issues/2613#issuecomment-799693903
-poetry install
-poe force-cuda11
+2. Execute in console `docker-compose up -d --build` to create the container
+3. Jupyter Lab available at `http://localhost:10000/lab`. Password is "docker"
