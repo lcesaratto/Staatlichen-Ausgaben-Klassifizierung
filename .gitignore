@@ -3,3 +3,4 @@ __pycache__
 pretrained_models/bert_pytorch/entire_model.pt
 pretrained_models/bert_pytorch/model_state_dict.pt
 pretrained_models/random_forest/best_estimator.pkl
+pretrained_models/random_forest/prep_pipeline.pkl
