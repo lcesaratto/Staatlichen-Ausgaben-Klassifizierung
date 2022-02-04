@@ -21,6 +21,7 @@ nlpaug = "^1.1.10"
 sentencepiece = "^0.1.96"
 spacy = "^3.2.1"
 jupyterlab = "^3.2.8"
+wordcloud = "^1.8.1"
 
 [tool.poetry.dev-dependencies]
 poethepoet = "^0.12.2"

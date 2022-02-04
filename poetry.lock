@@ -1802,14 +1802,6 @@ th = ["pythainlp (>=2.0)"]
 transformers = ["spacy-transformers (>=1.1.2,<1.2.0)"]
 
 [[package]]
-name = "spacy-alignments"
-version = "0.8.4"
-description = "A spaCy package for the Rust tokenizations library"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[[package]]
 name = "spacy-legacy"
 version = "3.0.8"
 description = "Legacy registered functions for spaCy backwards compatibility"
@@ -1827,34 +1819,6 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 wasabi = ">=0.8.1,<1.1.0"
-
-[[package]]
-name = "spacy-transformers"
-version = "1.1.4"
-description = "spaCy pipelines for pre-trained BERT and other transformers"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-spacy = ">=3.1.3,<4.0.0"
-spacy-alignments = ">=0.7.2,<1.0.0"
-srsly = ">=2.4.0,<3.0.0"
-torch = ">=1.6.0"
-transformers = ">=3.4.0,<4.16.0"
-
-[package.extras]
-cuda = ["cupy (>=5.0.0b4)"]
-cuda100 = ["cupy-cuda100 (>=5.0.0b4)"]
-cuda101 = ["cupy-cuda101 (>=5.0.0b4)"]
-cuda102 = ["cupy-cuda102 (>=5.0.0b4)"]
-cuda110 = ["cupy-cuda110 (>=5.0.0b4)"]
-cuda111 = ["cupy-cuda111 (>=5.0.0b4)"]
-cuda112 = ["cupy-cuda112 (>=5.0.0b4)"]
-cuda80 = ["cupy-cuda80 (>=5.0.0b4)"]
-cuda90 = ["cupy-cuda90 (>=5.0.0b4)"]
-cuda91 = ["cupy-cuda91 (>=5.0.0b4)"]
-cuda92 = ["cupy-cuda92 (>=5.0.0b4)"]
 
 [[package]]
 name = "srsly"
@@ -1974,17 +1938,6 @@ description = "A lil' TOML parser"
 category = "main"
 optional = false
 python-versions = ">=3.6"
-
-[[package]]
-name = "torch"
-version = "1.10.2"
-description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
-category = "main"
-optional = false
-python-versions = ">=3.6.2"
-
-[package.dependencies]
-typing-extensions = "*"
 
 [[package]]
 name = "tornado"
@@ -2207,6 +2160,19 @@ optional = ["python-socks", "wsaccel"]
 test = ["websockets"]
 
 [[package]]
+name = "wordcloud"
+version = "1.8.1"
+description = "A little word cloud generator"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+matplotlib = "*"
+numpy = ">=1.6.1"
+pillow = "*"
+
+[[package]]
 name = "xxhash"
 version = "2.0.2"
 description = "Python binding for xxHash"
@@ -2242,7 +2208,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "3379a52ece5e8c3526905bca523adf20ede51951170709a2e2f04d4450fa88ee"
+content-hash = "c627900234a55411fc7355e6457f4258e796367ff70425407cc3030dcd3e7b66"
 
 [metadata.files]
 aiohttp = [
@@ -3799,24 +3765,6 @@ spacy = [
     {file = "spacy-3.2.1-cp39-cp39-win_amd64.whl", hash = "sha256:a9df95ba949774ce6d34a4dacc766068bd812b1081a99375aa7db63df04527dc"},
     {file = "spacy-3.2.1.tar.gz", hash = "sha256:f6ebac511627740a8ca2b117b91ef5515c8f0b2fb117a69ebe01d010dd4fc53c"},
 ]
-spacy-alignments = [
-    {file = "spacy-alignments-0.8.4.tar.gz", hash = "sha256:d4702997f459d30e537f638fbb540151adfab88aa2969f9d0db3e3ba39f47bdb"},
-    {file = "spacy_alignments-0.8.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:fde0b20a9c629b07ce7bd3ccb31d1b2ddd465faee1a6f5c09ed1ef9cf07b8609"},
-    {file = "spacy_alignments-0.8.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:32400cc9eff8e4ea9d61d3f6974df979a2c272ca8e9cd65e2811e0aa1b4598ad"},
-    {file = "spacy_alignments-0.8.4-cp310-cp310-win_amd64.whl", hash = "sha256:3b5cd5beb15dd34d72304b5d07dbedd0676c4cbb018b2ad1994ee8560260810e"},
-    {file = "spacy_alignments-0.8.4-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:f38834d4f7d161a1f2e32511fa7262b07c79c51ed1c0255bd9ffcf355ed0c111"},
-    {file = "spacy_alignments-0.8.4-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b962d9e72e67203f5d8528d723fcdd467df1935e34ab2a94f720bf96f06526ce"},
-    {file = "spacy_alignments-0.8.4-cp36-cp36m-win_amd64.whl", hash = "sha256:3d0a6c55f130d542efb9c7fccec7674b2ee91c695a1c960e06431614fb7ed7aa"},
-    {file = "spacy_alignments-0.8.4-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:327ee5e7c6dc82a0ce915b79f431d3119b74b2e94faa0a0059723e072c915e6d"},
-    {file = "spacy_alignments-0.8.4-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:306c2827479ff3b2c377fd8e3cd20c5e9dac2a2d6e6034e62cae117994b56685"},
-    {file = "spacy_alignments-0.8.4-cp37-cp37m-win_amd64.whl", hash = "sha256:382f487c74533540ff9f82b6a7369d04b74dec6a3a2ddfc9d6f835eddc40b5f0"},
-    {file = "spacy_alignments-0.8.4-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:09ca14a8a43022f067521bb976c3a406edaff7e45ac2c61692a4a84e45d7c630"},
-    {file = "spacy_alignments-0.8.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:43b11507bb058cb29da454cbe8bb2727dcd3fc83398bcb6bf6bc28da5f1b0bae"},
-    {file = "spacy_alignments-0.8.4-cp38-cp38-win_amd64.whl", hash = "sha256:3eb2f35cee5d7cbc5c5b156a0a97379537186911bd9768fbb262b7e6818137a3"},
-    {file = "spacy_alignments-0.8.4-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:7111b2bca1fcd8e61ef8a508e5b25d1ca4a819063ae61b6ceb50074a8c917848"},
-    {file = "spacy_alignments-0.8.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:27f0816db4426dfc4954d506c8855618b6589274edce658b84813d83a2f6ed45"},
-    {file = "spacy_alignments-0.8.4-cp39-cp39-win_amd64.whl", hash = "sha256:e43ca54c61ab97fc98017c41f6b3b0e016d195a2bfbb3f449cb77d552a842798"},
-]
 spacy-legacy = [
     {file = "spacy-legacy-3.0.8.tar.gz", hash = "sha256:b4725c5c161f0685ab4fce3fc912bc68aefdb7e102ba9848e852bb5842256c2f"},
     {file = "spacy_legacy-3.0.8-py2.py3-none-any.whl", hash = "sha256:eb37a3540bb461b5fe9348d4976784f18a0e345982e41e2c5c7cd8229889e825"},
@@ -3824,10 +3772,6 @@ spacy-legacy = [
 spacy-loggers = [
     {file = "spacy-loggers-1.0.1.tar.gz", hash = "sha256:17d0e249b2e6c6546c49fc6561a0a685f91a8edbf24a5b2b7759ead443c74654"},
     {file = "spacy_loggers-1.0.1-py3-none-any.whl", hash = "sha256:5e610c980efb831fa428c24fd659e5dd850ea6140c9ed987efe0e8d26df3ee7c"},
-]
-spacy-transformers = [
-    {file = "spacy-transformers-1.1.4.tar.gz", hash = "sha256:1b4f5b6625d3744bae92f2a33ce6184d6fc1d7d778d3a412443394e597e50c35"},
-    {file = "spacy_transformers-1.1.4-py2.py3-none-any.whl", hash = "sha256:5eda1ac8a9951c5ecb42b9e942a708bfac5be3d16356fbac079e1098aa14dcf9"},
 ]
 srsly = [
     {file = "srsly-2.4.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:5e22bbc1a20abf749fa53adf101c36bc369ec63f496c7a44bf4f5f287d724900"},
@@ -3903,27 +3847,6 @@ tokenizers = [
 tomli = [
     {file = "tomli-1.2.3-py3-none-any.whl", hash = "sha256:e3069e4be3ead9668e21cb9b074cd948f7b3113fd9c8bba083f48247aab8b11c"},
     {file = "tomli-1.2.3.tar.gz", hash = "sha256:05b6166bff487dc068d322585c7ea4ef78deed501cc124060e0f238e89a9231f"},
-]
-torch = [
-    {file = "torch-1.10.2-cp310-cp310-manylinux2014_aarch64.whl", hash = "sha256:8f3fd2e3ffc3bb867133fdf7fbcc8a0bb2e62a5c0696396f51856f5abf9045a8"},
-    {file = "torch-1.10.2-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:258a0729fb77a3457d5822d84b536057cd119b08049a8d3c41dc3dcdeb48d56e"},
-    {file = "torch-1.10.2-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:935e5ac804c5093c79f23a7e6ca5b912c166071aa9d8b4a0a3d6a85126d6a47b"},
-    {file = "torch-1.10.2-cp36-cp36m-win_amd64.whl", hash = "sha256:65fd02ed889c63fd82bf1a440c5a94c1310c29f3e6f9f62add416d34da355d97"},
-    {file = "torch-1.10.2-cp36-none-macosx_10_9_x86_64.whl", hash = "sha256:6a81f886823bbd15edc2dc0908fa214070df61c9f7ab8831f0a03630275cca5a"},
-    {file = "torch-1.10.2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:3eee3cf53c1f8fb3f1fe107a22025a8501fc6440d14e09599ba7153002531f84"},
-    {file = "torch-1.10.2-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:ef99b8cca5f9358119b07956915faf6e7906f433ab4a603c160ae9de88918371"},
-    {file = "torch-1.10.2-cp37-cp37m-win_amd64.whl", hash = "sha256:d43bc3f3a2d89ae185ef96d903c935c335219231e57685658648396984e2a67a"},
-    {file = "torch-1.10.2-cp37-none-macosx_10_9_x86_64.whl", hash = "sha256:6da1b877880435440a5aa9678ef0f01986d4886416844db1d97ebfb7fd1778d0"},
-    {file = "torch-1.10.2-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:ab77a9f838874f295ed5410c0686fa22547456e0116efb281c66ef5f9d46fe28"},
-    {file = "torch-1.10.2-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:9ef4c004f9e5168bd1c1930c6aff25fed5b097de81db6271ffbb2e4fb8b89319"},
-    {file = "torch-1.10.2-cp38-cp38-win_amd64.whl", hash = "sha256:376fc18407add20daa6bbaaffc5a5e06d733abe53bcbd60ef2532bfed34bc091"},
-    {file = "torch-1.10.2-cp38-none-macosx_10_9_x86_64.whl", hash = "sha256:f281438ee99bd72ad65c0bba1026a32e45c3b636bc067fc145ad291e9ea2faab"},
-    {file = "torch-1.10.2-cp38-none-macosx_11_0_arm64.whl", hash = "sha256:3592d3dd62b32760c82624e7586222747fe2281240e8653970b35f1d6d4a434c"},
-    {file = "torch-1.10.2-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:fbaf18c1b3e0b31af194a9d853e3739464cf982d279df9d34dd18f1c2a471878"},
-    {file = "torch-1.10.2-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:97b7b0c667e8b0dd1fc70137a36e0a4841ec10ef850bda60500ad066bef3e2de"},
-    {file = "torch-1.10.2-cp39-cp39-win_amd64.whl", hash = "sha256:901b52787baeb2e9e1357ca7037da0028bc6ad743f530e0040ae96ef8e27156c"},
-    {file = "torch-1.10.2-cp39-none-macosx_10_9_x86_64.whl", hash = "sha256:5b68e9108bd7ebd99eee941686046c517cfaac5331f757bcf440fe02f2e3ced1"},
-    {file = "torch-1.10.2-cp39-none-macosx_11_0_arm64.whl", hash = "sha256:b07ef01e36b716d0d65ca60c4db0ac9d094a0e797d9b55290da4dcda91463b6c"},
 ]
 tornado = [
     {file = "tornado-6.1-cp35-cp35m-macosx_10_9_x86_64.whl", hash = "sha256:d371e811d6b156d82aa5f9a4e08b58debf97c302a35714f6f45e35139c332e32"},
@@ -4029,6 +3952,24 @@ webencodings = [
 websocket-client = [
     {file = "websocket-client-1.2.3.tar.gz", hash = "sha256:1315816c0acc508997eb3ae03b9d3ff619c9d12d544c9a9b553704b1cc4f6af5"},
     {file = "websocket_client-1.2.3-py3-none-any.whl", hash = "sha256:2eed4cc58e4d65613ed6114af2f380f7910ff416fc8c46947f6e76b6815f56c0"},
+]
+wordcloud = [
+    {file = "wordcloud-1.8.1-cp27-cp27m-macosx_10_6_x86_64.whl", hash = "sha256:2e85b1a6b8211436d47f902837c866c682c5d00046706f1d8e72cc0cd9210d64"},
+    {file = "wordcloud-1.8.1-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:e0d3f03e4f27faf543859b4bcd229d320361d065cf4786f149081adea4ee68e8"},
+    {file = "wordcloud-1.8.1-cp27-cp27m-win32.whl", hash = "sha256:a02b27400bc4b2e4efdd8377e8cd138496b6b6e15a082d9c7b7c7b74a9ee8a55"},
+    {file = "wordcloud-1.8.1-cp27-cp27m-win_amd64.whl", hash = "sha256:6450f67c207f2ab4513c4aac803226427b39f7fc8d3498c0b41a03834b2fc426"},
+    {file = "wordcloud-1.8.1-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:f49f5213e978fb5d8ff8f6e6067de657e81ca863cab549b198579f58e1430e7c"},
+    {file = "wordcloud-1.8.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:41dafafe3768675ba8285d21ac68bd53191b50da85aba2a7fb35964d1649156f"},
+    {file = "wordcloud-1.8.1-cp36-cp36m-win32.whl", hash = "sha256:cd8c44a21a3207da813c7b7e486ed41fe517eb7b8535deef945437f4cea2b245"},
+    {file = "wordcloud-1.8.1-cp36-cp36m-win_amd64.whl", hash = "sha256:2d5f63cf1f65126d6d1b8d55acae15961c5bd55e6ef8978bf269831dafcd1408"},
+    {file = "wordcloud-1.8.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:6ff0ca777c801cd2a38deef30019f02fe35df1be9c31f6c301a34bd45006e26b"},
+    {file = "wordcloud-1.8.1-cp37-cp37m-win32.whl", hash = "sha256:9ed09d2d2916514845e42b0cc5dd86f65d4f0f89ab4bf164cc9a628d9db5a76b"},
+    {file = "wordcloud-1.8.1-cp37-cp37m-win_amd64.whl", hash = "sha256:2e1fc5991f52a0e191873025f5d8cf852eb1c39f2579d43e6d2589dc04d620d9"},
+    {file = "wordcloud-1.8.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:daa7d72f0004fcfea5f649f1683dbe47c4a9c5f721aabeb41278a4ee33f21424"},
+    {file = "wordcloud-1.8.1-cp38-cp38-win32.whl", hash = "sha256:a4a626df47eacec207988e1ffdb5bd16b2b62ac83ea2442a0043080c0c5103ac"},
+    {file = "wordcloud-1.8.1-cp38-cp38-win_amd64.whl", hash = "sha256:f190eb3efcc17765a4ed9d78001fdb713988886b93e54b2758fcf4f6c519ad51"},
+    {file = "wordcloud-1.8.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:90e9cff2c6939b5e1fa87d2a2c5d79c8ac2eafc4c9b9bc1bcb865ca5fde7e758"},
+    {file = "wordcloud-1.8.1.tar.gz", hash = "sha256:e6ef771aac17c1cf8558c8d5ef025796184066d7b78f8118aefe011fb0d22952"},
 ]
 xxhash = [
     {file = "xxhash-2.0.2-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:dac3b94881b943bbe418f5829128b9c48f69a66f816ef8b72ee0129d676dbd7c"},
