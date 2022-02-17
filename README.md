@@ -1,6 +1,28 @@
-# Staatlichen Ausgaben Klassifizierung
+# Case-Study: Staatlichen Ausgaben Klassifizierung
 
-## Case-Study
+## Datenbeschreibung
+
+Der Bundesstaat Berlin veröffentlicht jährlich die Details von staatlichen Ausgaben. Die Datensatz und Dateidefinitionen sind zu finden unter:
+
+- https://www.berlin.de/sen/finanzen/service/zuwendungsdatenbank/
+
+Ein Auszug der Dateien:
+
+| Name                                                                     | Geber               | Art              | Jahr | Anschrift                       | Politikbereich | Zweck                                      | Betrag |
+| ------------------------------------------------------------------------ | ------------------- | ---------------- | ---- | ------------------------------- | -------------- | ------------------------------------------ | ------ |
+| ImPULS e. V.                                                             | Bezirksamt Neukölln | Projektförderung | 2016 | Bat-Yam-Platz 1, 12353 Berlin   | Bildung        | Sprachschulungen für aktive Gropiusstädter | 6607   |
+| Verein zur Förderung der Kommunikation unter Gropiusstädter Frauen e. V. | Bezirksamt Neukölln | Projektförderung | 2016 | Löwensteinring 22, 12353 Berlin | Familie        | Kinderbildungscafe                         | 2499   |
+| Verein zur Förderung der Kommunikation unter Gropiusstädter Frauen e. V. | Bezirksamt Neukölln | Projektförderung | 2016 | Löwensteinring 22, 12353 Berlin | Jugend         | Service Learning                           | 15363  |
+
+## Aufgabenbeschreibung
+
+### Klassifizierung
+
+Einzelne Ausgaben müssen basierend auf Zweck Felde, in den passenden Politikbereich zugeordnet werden.
+
+### Clustering/Topic Modelling
+
+In der Praxis fehlen die Kategorie-Kennzeichnungen. Um dieses Problem beheben zu können, wird nach Gruppierungen in dem Datensatz gesucht. Deine Aufgabe ist es, diese Gruppierungen anhand einer Kombination der Felder Zweck und Name zu finden.
 
 ### Technologies
 
